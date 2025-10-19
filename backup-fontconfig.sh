@@ -26,4 +26,4 @@ echo "→ Overzicht opslaan..."
   fc-list : file | sort -u
 } > "$BACKUP_DIR/font-list.txt"
 
-echo "✅ Backup voltooid: $BACKUP_DIR"
+echo "Backup voltooid: $BACKUP_DIR"
