@@ -1,4 +1,4 @@
-# Linux Font Rendering Configuration
+# Linux Font Rendering Configuration For Bluefin
 
 Deze configuratie verbetert de standaard font rendering op Linux voor maximale helderheid, balans en leesbaarheid.  
 Ze gebruikt uitsluitend **Inter OTF** (geen Variable of TTC), zet **grayscale antialiasing** aan, **hintslight** voor zachte randen,  
