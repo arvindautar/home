@@ -20,7 +20,7 @@ Dit project bevat een persoonlijke back-up van mijn **fontconfig-instellingen** 
 - **.gitignore**  
   Zorgt ervoor dat grote archieven (`.tar.gz`) niet per ongeluk worden meegestuurd.
 
-## ⚙️ Gebruik
+## Gebruik
 
 ### Back-up maken
 ```bash
