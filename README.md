@@ -21,3 +21,20 @@ Deze setup brengt het uiterlijk dichter bij macOS/Windows: helder, gelijkmatig e
 ### 2. FreeType (in `/etc/environment`)
 ```bash
 FREETYPE_PROPERTIES="autofitter:no-stem-darkening=1 cff:no-stem-darkening=1 type1:no-stem-darkening=1 t1cid:no-stem-darkening=1"
+
+
+# Fontconfig Backup en Herstel
+
+Deze configuratie bewaart en herstelt alle instellingen voor strakke Linux-fontweergave met Inter OTF, JetBrains Mono en Noto Serif. Ze omvat zowel de Fontconfig-regels als de FreeType-parameters uit `/etc/environment`.
+
+## backup-fontconfig.sh
+Maakt een volledige back-up van:
+- `~/.config/fontconfig/`
+- `~/.fonts/` en `~/.local/share/fonts/`
+- `/etc/environment` (inclusief FREETYPE_PROPERTIES)
+- en genereert een overzichtsbestand met alle actieve fonts.
+
+Gebruik:
+```bash
+chmod +x backup-fontconfig.sh
+./backup-fontconfig.sh
