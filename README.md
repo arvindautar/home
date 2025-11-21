@@ -13,9 +13,8 @@ This applies **only inside Brave**, without changing system fonts.
 
 ## **What This Does**
 
-
-
 ✔ Replaces all system fallback fonts with Noto
+
 ✔ Overrides Segoe UI (and all variants) → Noto Sans
 ✔ Overrides Adwaita/Cantarell → Noto Sans
 ✔ Overrides Arial/Helvetica/Verdana → Noto Sans
