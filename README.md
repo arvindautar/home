@@ -16,11 +16,17 @@ This applies **only inside Brave**, without changing system fonts.
 ✔ Replaces all system fallback fonts with Noto
 
 ✔ Overrides Segoe UI (and all variants) → Noto Sans
+
 ✔ Overrides Adwaita/Cantarell → Noto Sans
+
 ✔ Overrides Arial/Helvetica/Verdana → Noto Sans
+
 ✔ Overrides Times/Georgia/Cambria → Noto Serif
+
 ✔ Overrides Consolas/Courier → Noto Sans Mono
+
 ✔ Gives Brave clean, consistent, high-quality font rendering
+
 ✔ Works fully inside the Flatpak sandbox
 
 Does not block website WOFF2 fonts — only system fallback fonts.
