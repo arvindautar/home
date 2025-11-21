@@ -1,88 +1,54 @@
+Brave Flatpak – Noto Font Override
 
-# **Noto Font Override for Brave (Flatpak Only)**
+This project forces Brave Browser (Flatpak) to stop using proprietary system fonts—like Segoe UI, Arial, Helvetica, Verdana, Times New Roman, Consolas—and replaces them with:
 
-This project forces **Brave Browser (Flatpak)** to stop using proprietary system fonts (Segoe UI, Arial, Helvetica, Verdana, Times New Roman, Consolas, etc.) and instead use:
+Noto Sans (all sans-serif)
 
-* **Noto Sans** for all sans-serif
-* **Noto Serif** for all serif
-* **Noto Sans Mono** for all monospace
+Noto Serif (all serif)
 
-This applies **only inside Brave**, without changing system fonts.
+Noto Sans Mono (all monospace)
 
----
+This override affects only Brave, not your system fonts.
 
-## **What This Does**
+What It Does
 
-✔ Replaces all system fallback fonts with Noto
+✔ Replaces all fallback fonts in Brave with Noto
+✔ Eliminates Segoe UI (including Historic, Symbol)
+✔ Overrides Adwaita Sans, Cantarell → Noto Sans
+✔ Overrides Arial, Helvetica, Verdana, Tahoma → Noto Sans
+✔ Overrides Times, Georgia, Cambria → Noto Serif
+✔ Overrides Consolas, Courier → Noto Sans Mono
+✔ Produces cleaner, sharper, consistent typography
+✔ Fully contained inside Flatpak sandbox
 
-✔ Overrides Segoe UI (and all variants) → Noto Sans
+Does not block website-loaded webfonts (WOFF/WOFF2).
 
-✔ Overrides Adwaita/Cantarell → Noto Sans
+Installation
 
-✔ Overrides Arial/Helvetica/Verdana → Noto Sans
+Place the override file here:
 
-✔ Overrides Times/Georgia/Cambria → Noto Serif
+~/.var/app/com.brave.Browser/config/fontconfig/conf.d/99-noto-overrides.conf
 
-✔ Overrides Consolas/Courier → Noto Sans Mono
 
-✔ Gives Brave clean, consistent, high-quality font rendering
+Then rebuild the font cache inside Brave:
 
-✔ Works fully inside the Flatpak sandbox
-
-Does not block website WOFF2 fonts — only system fallback fonts.
-
----
-
-## **Install**
-
-Create config directory:
-
-```bash
-mkdir -p ~/.var/app/com.brave.Browser/config/fontconfig/conf.d
-```
-
-Create loader:
-
-```bash
-nano ~/.var/app/com.brave.Browser/config/fontconfig/fonts.conf
-```
-
-Paste:
-
-```xml
-<fontconfig>
-    <include ignore_missing="yes">/etc/fonts/fonts.conf</include>
-    <include ignore_missing="yes">conf.d</include>
-</fontconfig>
-```
-
-Copy the override:
-
-```bash
-cp 99-noto-overrides.conf \
-   ~/.var/app/com.brave.Browser/config/fontconfig/conf.d/
-```
-
-Rebuild cache inside Brave:
-
-```bash
 flatpak run --command=fc-cache com.brave.Browser -f
-```
 
----
 
-## **Verify**
+Done.
 
-```bash
+Brave will automatically pick up the override—no fonts.conf required.
+
+Verification
+
+Run:
+
 flatpak run --command=fc-match com.brave.Browser "Segoe UI"
-```
+
 
 Expected:
 
-```
 NotoSans[wght].ttf: "Noto Sans" "Regular"
-```
-
-If you see **Noto**, the override is active.
 
 
+If you see Noto, the override is active.
