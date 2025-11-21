@@ -74,4 +74,3 @@ If you see **Noto**, the override is active.
 
 ---
 
-If you want an even shorter version, or a GitHub description section, I can rewrite it again.
