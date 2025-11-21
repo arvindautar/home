@@ -1,8 +1,4 @@
-Here is the **rewritten, short, powerful, clean README**, updated to match your setup **without** `fonts.conf`:
-
----
-
-# **Brave Flatpak – Noto Font Override**
+# **Brave Flatpak - Noto Font Override**
 
 This project forces **Brave Browser (Flatpak)** to stop using proprietary system fonts—like Segoe UI, Arial, Helvetica, Verdana, Times New Roman, Consolas—and replaces them with:
 
