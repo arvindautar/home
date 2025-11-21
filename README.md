@@ -1,7 +1,7 @@
 
 # **Noto Font Override for Brave (Flatpak Only)**
 
-This project forces **Brave Browser (Flatpak)** to stop using proprietary system fonts (Segoe UI, Adwaita Sans, Arial, Helvetica, Verdana, Times New Roman, Consolas, etc.) and instead use:
+This project forces **Brave Browser (Flatpak)** to stop using proprietary system fonts (Segoe UI, Arial, Helvetica, Verdana, Times New Roman, Consolas, etc.) and instead use:
 
 * **Noto Sans** for all sans-serif
 * **Noto Serif** for all serif
